@@ -44,7 +44,7 @@ npm install lite-server --save-dev
 - then, it will work
 ![](img/8.png)
 
-# 前置工作
+### `前置工作`
 - since I have installed npm in global
 ![](img/9.png)
 
@@ -62,3 +62,32 @@ tsc -w app.ts
 ```
 ![](img/11.png)
 
+
+
+
+### Environment Setup
+
+1. create a new package
+`mkdir fetchJson`
+`cd fetchJson`
+
+2. npm install axios
+-In a nutshell, Axios is a Javascript library used to make HTTP requests from node.js or XMLHttpRequests from the browser that also supports the ES6 Promise API. 
+
+3. in fetchJson folder, create a index.ts
+- Make a network request to fecth some JSON and print the result
+- go to jsonplaceholder
+[jsonplaceholder](https://jsonplaceholder.typicode.com/)
+- after click the website address
+-  => Resources => /todos (click /todos)
+-  https://jsonplaceholder.typicode.com/todos/1
+
+```ts
+import axios from 'axios';
+const url = 'https://jsonplaceholder.typicode.com/todos/1';
+axios.get(url).then((response) => {
+    console.log(response.data);
+})
+```
+### Remember we can't run typescript code directly inside the browser
+- we have to compile the file into plain 
