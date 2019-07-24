@@ -111,7 +111,44 @@ car.honk();
 ```
 
 
+- protected
+```ts
+class Vehicle {
+    
+    protected honk(): void {
+        console.log('beep');
+    }
+}
+
+class Car extends Vehicle {
+    private drive(): void{
+        console.log('vroom');
+    }
+    startDrivingProcess(): void{
+        this.drive();
+        this.honk();
+    }
+}
+
+const car = new Car();
+car.startDrivingProcess();
+```
 
 
+
+### `Fields in Classes`
+```ts
+class Vehicle {
+
+    constructor(public color: string){}
+
+    protected honk(): void {
+        console.log('beep');
+    }
+}
+
+const vehicle = new Vehicle('orange');
+console.log(vehicle.color);
+```
 ![](img/.png)
 ![](img/.png)
