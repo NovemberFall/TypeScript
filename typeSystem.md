@@ -133,17 +133,4 @@ for(let i=0; i<numbers.length; i++){
 
 
 
-### `More on Annotations Around Functions`
-```ts
-const add = (a: number, b: number): number => {
-    return a + b;
-};
-```
-
-
-
-
-
-
-
 
