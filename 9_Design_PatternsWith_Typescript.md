@@ -71,3 +71,24 @@ console.log('hi there!');
 ## Using Type Definition files
 - if we `command+click` `faker`
 ![](img/2020-01-02-21-54-56.png)
+- update User.ts
+```ts
+import faker from 'faker';
+
+export class User{
+    name: string;
+
+    location:{
+        lat: number; //latitude纬度
+        lng: number; //longitude经度
+    };
+
+    constructor(){
+        this.name = faker.name.firstName();
+        this.location = {
+            lat: parseFloat(faker.address.latitude()),
+            lng: parseFloat(faker.address.longitude());
+        };
+    }
+}
+```

@@ -1,7 +1,7 @@
 import faker from 'faker';
 
-class User{
-    mame: string;
+export class User{
+    name: string;
 
     location:{
         lat: number; //latitude纬度
@@ -9,6 +9,10 @@ class User{
     };
 
     constructor(){
-        this.name = faker.name.findName();
+        this.name = faker.name.firstName();
+        this.location = {
+            lat: parseFloat(faker.address.latitude()),
+            lng: parseFloat(faker.address.longitude());
+        };
     }
 }
